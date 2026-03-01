@@ -8,27 +8,27 @@ export default function Nav() {
 
     return(
         <nav className="nav">
-        <span className="nav-logo">Vern Kofford</span>
+            <span className="nav-logo">Vern Kofford</span>
 
-        <div className="nav-links">
-            {NAV_LINKS.map((link) => (
-            <a key={link} href={`#${link.toLowerCase()}`}>{link}</a>
-            ))}
-        </div>
-
-        <button className="nav-hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-            {menuOpen ? '✕' : '☰'}
-        </button>
-
-        {menuOpen && (
-            <div className="nav-mobile">
-            {NAV_LINKS.map((link) => (
-                <a key={link} href={`#${link.toLowerCase()}`} onClick={() => setMenuOpen(false)}>
-                {link}
-                </a>
-            ))}
+            <div className="nav-links">
+                {NAV_LINKS.map((link) => (
+                <a key={link} href={`#${link.toLowerCase()}`}>{link}</a>
+                ))}
             </div>
-        )}
+
+            <button className="nav-hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+                {menuOpen ? '✕' : '☰'}
+            </button>
+
+            {menuOpen && (
+                <div className="nav-mobile">
+                {NAV_LINKS.map((link) => (
+                    <a key={link} href={`#${link.toLowerCase()}`} onClick={() => setMenuOpen(false)}>
+                    {link}
+                    </a>
+                ))}
+                </div>
+            )}
         </nav>
     )
 }
