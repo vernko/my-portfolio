@@ -1,5 +1,6 @@
-import Nav from './components/Nav'
 import Hero from './components/Hero'
+import Nav from './components/Nav'
+import Projects from './components/Projects'
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
         description="I build reliable systems and automate the things that shouldn't need human attention."
         location="Huntington, Utah"
       />
+      <Projects />
     </div>
   )
 }
