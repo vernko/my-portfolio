@@ -30,7 +30,7 @@ export default function Skills() {
 
             <div className="skills-grid">
                 {SKILLS.map((skill) => (
-                    <div key={skill.id} className="skill-card">
+                    <div key={skill.category} className="skill-card">
                         <h3>{skill.category}</h3>
 
                         <div className="card-tech">

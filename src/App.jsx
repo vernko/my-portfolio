@@ -1,4 +1,5 @@
 import About from './components/About'
+import Experience from './components/Experience'
 import Hero from './components/Hero'
 import Nav from './components/Nav'
 import Projects from './components/Projects'
@@ -15,9 +16,10 @@ export default function App() {
         location="Huntington, Utah"
       />
       <div className="app-wrapper">
-        <Projects />
-        <Skills />
         <About />
+        <Skills />
+        <Experience />
+        <Projects />
       </div>
     </div>
   )

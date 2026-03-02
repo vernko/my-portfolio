@@ -40,21 +40,21 @@ export default function Projects() {
         <section id="projects" className="projects">
             <h1>Projects</h1>
 
-            <div className="cards">
+            <div className="projects-grid">
                 {PROJECTS.map((card) => (
-                    <div key={card.id} className="card">
-                        <div className="card-title">
+                    <div key={card.id} className="project-card">
+                        <div className="project-card-title">
                             <h2>{card.title}</h2>
                         </div>
-                        <div className="card-description">
+                        <div className="project-card-description">
                             <p>{card.description}</p>
                         </div>
-                        <div className="card-tech">
+                        <div className="project-card-tech">
                             {card.tech.map((tech) => (
                             <span key={tech}>{tech}</span>
                             ))}
                         </div>
-                        <div className="card-link">
+                        <div className="project-card-link">
                             <a href={card.link} target="_blank">View Project</a>
                         </div>
                     </div>
