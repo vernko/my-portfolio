@@ -1,3 +1,4 @@
+import About from './components/About'
 import Hero from './components/Hero'
 import Nav from './components/Nav'
 import Projects from './components/Projects'
@@ -16,6 +17,7 @@ export default function App() {
       <div className="app-wrapper">
         <Projects />
         <Skills />
+        <About />
       </div>
     </div>
   )
