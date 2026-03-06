@@ -22,11 +22,11 @@ export default function Nav() {
 
             {menuOpen && (
                 <div className="nav-mobile">
-                {NAV_LINKS.map((link) => (
-                    <a key={link} href={`#${link.toLowerCase()}`} onClick={() => setMenuOpen(false)}>
-                    {link}
-                    </a>
-                ))}
+                    {NAV_LINKS.map((link) => (
+                        <a key={link} href={`#${link.toLowerCase()}`} onClick={() => setMenuOpen(false)}>
+                        {link}
+                        </a>
+                    ))}
                 </div>
             )}
         </nav>
