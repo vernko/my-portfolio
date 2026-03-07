@@ -1,4 +1,5 @@
 import About from './components/About'
+import Blog from './components/Blog'
 import Contact from './components/Contact'
 import Experience from './components/Experience'
 import Hero from './components/Hero'
@@ -21,6 +22,7 @@ export default function App() {
         <Skills />
         <Experience />
         <Projects />
+        <Blog />
         <Contact />
       </div>
     </div>
