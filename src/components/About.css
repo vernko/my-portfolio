@@ -38,3 +38,9 @@
     grid-column: span 3;
     color: #94a3b8;
 }
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}

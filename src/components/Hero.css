@@ -62,3 +62,13 @@
 .hero-social a:hover {
   color: #a3e635;
 }
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 0 24px;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+  }
+}

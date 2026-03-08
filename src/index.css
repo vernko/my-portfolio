@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  max-width: 100%;
 }
 
 body {
@@ -9,11 +10,6 @@ body {
   color: rgba(255, 255, 255, 0.87);
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   min-height: 100vh;
-}
-
-.app-wrapper {
-  max-width: 1100px;
-  margin: 0 auto;
 }
 
 section {
