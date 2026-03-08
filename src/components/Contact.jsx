@@ -74,61 +74,60 @@ export default function Contact() {
 
     return (
         <section id="contact" className="contact">
-            <div className="contact-form-heading">
+            <div className="contact-inner">
                 <h1>Contact</h1>
-                <p className="required-note"><span className="required">*</span > Required fields</p>
+
+                {sent ? (
+                    <div className="contact-success">
+                        Message sent! I'll get back to you soon.
+                    </div>
+                ) : (
+                    <form onSubmit={handleSubmit} className="contact-grid">
+                        <div>
+                            <label htmlFor="name">Name: <span className="required">*</span></label>
+                            <input
+                                type="text"
+                                className="contact-input"
+                                id="name"
+                                placeholder="Your name"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                                onBlur={() => validateField('name')}
+                            />
+                            {errors.name && <p className="contact-error">{errors.name}</p>}
+                        </div>
+                        <div>
+                            <label htmlFor="email">Email: <span className="required">*</span></label>
+                            <input
+                                type="text"
+                                className="contact-input"
+                                id="email"
+                                placeholder="Your email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                onBlur={() => validateField('email')}
+                            />
+                            {errors.email && <p className="contact-error">{errors.email}</p>}
+                        </div>
+                        <div>
+                            <label htmlFor="message">Message: <span className="required">*</span></label>
+                            <textarea
+                                type="text"
+                                className="contact-input"
+                                id="message"
+                                placeholder="Your message"
+                                value={message}
+                                onChange={(e) => setMessage(e.target.value)}
+                                onBlur={() => validateField('message')}
+                            />
+                            {errors.message && <p className="contact-error">{errors.message}</p>}
+                        </div>
+
+                        {submitError && <p className="contact-error">{submitError}</p>}
+                        <button type="submit" className="contact-submit">{isSubmitting ? 'Sending...' : 'Submit'}</button>
+                    </form>
+                )}
             </div>
-
-            {sent ? (
-                <div className="contact-success">
-                    Message sent! I'll get back to you soon.
-                </div>
-            ) : (
-                <form onSubmit={handleSubmit} className="contact-grid">
-                    <div>
-                        <label htmlFor="name">Name: <span className="required">*</span></label>
-                        <input
-                            type="text"
-                            className="contact-input"
-                            id="name"
-                            placeholder="Your name"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                            onBlur={() => validateField('name')}
-                        />
-                        {errors.name && <p className="contact-error">{errors.name}</p>}
-                    </div>
-                    <div>
-                        <label htmlFor="email">Email: <span className="required">*</span></label>
-                        <input
-                            type="text"
-                            className="contact-input"
-                            id="email"
-                            placeholder="Your email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            onBlur={() => validateField('email')}
-                        />
-                        {errors.email && <p className="contact-error">{errors.email}</p>}
-                    </div>
-                    <div>
-                        <label htmlFor="message">Message: <span className="required">*</span></label>
-                        <textarea
-                            type="text"
-                            className="contact-input"
-                            id="message"
-                            placeholder="Your message"
-                            value={message}
-                            onChange={(e) => setMessage(e.target.value)}
-                            onBlur={() => validateField('message')}
-                        />
-                        {errors.message && <p className="contact-error">{errors.message}</p>}
-                    </div>
-
-                    {submitError && <p className="contact-error">{submitError}</p>}
-                    <button type="submit" className="contact-submit">{isSubmitting ? 'Sending...' : 'Submit'}</button>
-                </form>
-            )}
         </section>
     )
 }

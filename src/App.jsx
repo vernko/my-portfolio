@@ -17,14 +17,12 @@ export default function App() {
         description="I build reliable systems and automate the things that shouldn't need human attention."
         availability="🟢 Open to new opportunities"
       />
-      <div className="app-wrapper">
-        <About />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Blog />
-        <Contact />
-      </div>
+      <About />
+      <Skills />
+      <Experience />
+      <Projects />
+      <Blog />
+      <Contact />
     </div>
   )
 }
