@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 48px;
+  padding: 0 48px 0 96px;
 }
 
 .hero h1 {
@@ -26,4 +26,22 @@
   color: #94a3b8;
   max-width: 480px;
   margin: 0 0 12px;
+}
+
+.hero-cta {
+  background: transparent;
+  border: 1px solid #334155;
+  color: #e2e8f0;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+  margin-top: 8px;
+  align-self: flex-start;
+}
+
+.hero-cta:hover {
+  border-color: #a3e635;
+  color: #a3e635;
 }

@@ -15,16 +15,14 @@ export default function App() {
         name="Vern Kofford"
         title="Software Engineer in Test"
         description="I build reliable systems and automate the things that shouldn't need human attention."
-        location="Huntington, Utah"
+        availability="🟢 Open to new opportunities"
       />
-      <div className="app-wrapper">
-        <About />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Blog />
-        <Contact />
-      </div>
+      <About />
+      <Skills />
+      <Experience />
+      <Projects />
+      <Blog />
+      <Contact />
     </div>
   )
 }

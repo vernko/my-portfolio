@@ -48,25 +48,28 @@ const EXPERIENCES = [
 export default function Experience() {
     return (
         <section id="experience" className="experience">
-            <h1>Experience</h1>
+            <div className="experience-inner">
+                <h1>Experience</h1>
 
-            <div className="experience-grid">
-                {EXPERIENCES.map((experience) => (
-                    <div key={`${experience.company}-${experience.title}`} className="experience-card">
-                        <div className="experience-card-title">
-                            <h2>{experience.title}</h2>
+                <div className="experience-grid">
+                    {EXPERIENCES.map((experience) => (
+                        <div key={`${experience.company}-${experience.title}`} className="experience-card">
+                            <div className="experience-card-title">
+                                <h2>{experience.title}</h2>
+                            </div>
+                            <div className="experience-card-middle">
+                                <span>{experience.company}</span>
+                                <span>{experience.date}</span>
+                                <span>{experience.location}</span>
+                            </div>
+                            <div className="experience-card-description">
+                                <p>{experience.description}</p>
+                            </div>
                         </div>
-                        <div className="experience-card-middle">
-                            <span>{experience.company}</span>
-                            <span>{experience.date}</span>
-                            <span>{experience.location}</span>
-                        </div>
-                        <div className="experience-card-description">
-                            <p>{experience.description}</p>
-                        </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
+
         </section>
     )
 }

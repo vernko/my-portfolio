@@ -26,20 +26,22 @@ const SKILLS = [
 export default function Skills() {
     return(
         <section id="skills" className="skills">
-            <h2>Skills</h2>
+            <div className="skills-inner">
+                <h2>Skills</h2>
 
-            <div className="skills-grid">
-                {SKILLS.map((skill) => (
-                    <div key={skill.category} className="skill-card">
-                        <h3>{skill.category}</h3>
+                <div className="skills-grid">
+                    {SKILLS.map((skill) => (
+                        <div key={skill.category} className="skill-card">
+                            <h3>{skill.category}</h3>
 
-                        <div className="card-tech">
-                            {skill.tech.map((item) => (
-                            <span key={item}>{item}</span>
-                            ))}
+                            <div className="card-tech">
+                                {skill.tech.map((badge) => (
+                                <span key={badge} className="skill-badge">{badge}</span>
+                                ))}
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </section>
     )

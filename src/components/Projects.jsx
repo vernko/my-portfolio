@@ -38,27 +38,29 @@ const PROJECTS = [
 export default function Projects() {
     return(
         <section id="projects" className="projects">
-            <h1>Projects</h1>
-
-            <div className="projects-grid">
-                {PROJECTS.map((card) => (
-                    <div key={card.id} className="project-card">
-                        <div className="project-card-title">
-                            <h2>{card.title}</h2>
+            <div className="projects-inner">
+                <h1>Projects</h1>
+                
+                <div className="projects-grid">
+                    {PROJECTS.map((card) => (
+                        <div key={card.id} className="project-card">
+                            <div className="project-card-title">
+                                <h2>{card.title}</h2>
+                            </div>
+                            <div className="project-card-description">
+                                <p>{card.description}</p>
+                            </div>
+                            <div className="project-card-tech">
+                                {card.tech.map((tech) => (
+                                <span key={tech}>{tech}</span>
+                                ))}
+                            </div>
+                            <div className="project-card-link">
+                                <a href={card.link} target="_blank">View Project</a>
+                            </div>
                         </div>
-                        <div className="project-card-description">
-                            <p>{card.description}</p>
-                        </div>
-                        <div className="project-card-tech">
-                            {card.tech.map((tech) => (
-                            <span key={tech}>{tech}</span>
-                            ))}
-                        </div>
-                        <div className="project-card-link">
-                            <a href={card.link} target="_blank">View Project</a>
-                        </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </section>
     )
