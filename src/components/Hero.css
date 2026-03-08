@@ -38,10 +38,27 @@
   cursor: pointer;
   transition: border-color 0.2s, color 0.2s;
   margin-top: 8px;
+  margin-bottom: 15px;
   align-self: flex-start;
 }
 
 .hero-cta:hover {
   border-color: #a3e635;
+  color: #a3e635;
+}
+
+.hero-social {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.hero-social a {
+  color: #94a3b8;
+  font-size: 1.75rem;
+  transition: color 0.2s;
+}
+
+.hero-social a:hover {
   color: #a3e635;
 }

@@ -89,6 +89,7 @@ export default function Contact() {
                                 type="text"
                                 className="contact-input"
                                 id="name"
+                                autoComplete="name"
                                 placeholder="Your name"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
@@ -99,9 +100,10 @@ export default function Contact() {
                         <div>
                             <label htmlFor="email">Email: <span className="required">*</span></label>
                             <input
-                                type="text"
+                                type="email"
                                 className="contact-input"
                                 id="email"
+                                autoComplete="email"
                                 placeholder="Your email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
