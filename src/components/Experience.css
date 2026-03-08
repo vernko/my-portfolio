@@ -56,3 +56,9 @@
     padding-bottom: 10px;
     color: #f1f5f9;
 }
+
+@media (max-width: 768px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -14,7 +14,6 @@
 .project-card {
     background: rgba(65, 65, 65, 0.92);
     padding: 20px;
-    margin: 5px;
     display: grid;
     grid-template-rows: auto 1fr auto auto;
     border-top: 3px solid #a3e635;
@@ -85,4 +84,14 @@
     font-size: 2.5rem;
     text-align: right;
     margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .projects-inner {
+    padding: 24px 12px;
+  }
 }
