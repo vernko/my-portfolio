@@ -1,8 +1,11 @@
 import './About.css'
+import useScrollAnimation from '../hooks/useScrollAnimation'
 
 export default function About() {
+  const ref = useScrollAnimation()
+
   return (
-    <section id="about" className="about">
+    <section id="about" className="about fade-in" ref={ref}>
       <div className="about-inner">
         <h2>About</h2>
         <div className="about-grid">

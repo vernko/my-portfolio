@@ -1,4 +1,5 @@
 import './Experience.css'
+import useScrollAnimation from '../hooks/useScrollAnimation'
 
 const EXPERIENCES = [
     {
@@ -46,8 +47,10 @@ const EXPERIENCES = [
 ]
 
 export default function Experience() {
+    const ref = useScrollAnimation()
+
     return (
-        <section id="experience" className="experience">
+        <section id="experience" className="experience fade-in" ref={ref}>
             <div className="experience-inner">
                 <h1>Experience</h1>
 
