@@ -1,4 +1,5 @@
 import './Projects.css'
+import useScrollAnimation from '../hooks/useScrollAnimation'
 
 const PROJECTS = [
     {
@@ -36,8 +37,10 @@ const PROJECTS = [
 ]
 
 export default function Projects() {
+    const ref = useScrollAnimation()
+
     return(
-        <section id="projects" className="projects">
+        <section id="projects" className="projects fade-in" ref={ref}>
             <div className="projects-inner">
                 <h1>Projects</h1>
                 

@@ -1,4 +1,5 @@
 import './Skills.css'
+import useScrollAnimation from '../hooks/useScrollAnimation'
 
 const SKILLS = [
     {
@@ -24,8 +25,10 @@ const SKILLS = [
 ]
 
 export default function Skills() {
+    const ref = useScrollAnimation()
+
     return(
-        <section id="skills" className="skills">
+        <section id="skills" className="skills fade-in" ref={ref}>
             <div className="skills-inner">
                 <h2>Skills</h2>
 

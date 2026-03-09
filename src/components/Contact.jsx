@@ -1,5 +1,6 @@
 import { useState } from "react"
 import './Contact.css'
+import useScrollAnimation from '../hooks/useScrollAnimation'
 
 export default function Contact() {
     const [name, setName] = useState('')
@@ -72,8 +73,10 @@ export default function Contact() {
         }
     }
 
+    const ref = useScrollAnimation()
+
     return (
-        <section id="contact" className="contact">
+        <section id="contact" className="contact fade-in" ref={ref}>
             <div className="contact-inner">
                 <h1>Contact</h1>
 
