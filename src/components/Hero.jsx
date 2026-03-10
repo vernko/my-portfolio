@@ -12,8 +12,8 @@ export default function Hero({ name, title, description, availability }) {
         View My Work
       </button>
       <div className="hero-social">
-        <a href="https://github.com/vernko" target="_blank" rel="noreferrer"><FaGithub /></a>
-        <a href="https://www.linkedin.com/in/vernkofford/" target="_blank" rel="noreferrer"><FaLinkedin /></a>
+        <a href="https://github.com/vernko" target="_blank" rel="noreferrer" aria-label="GitHub"><FaGithub /></a>
+        <a href="https://www.linkedin.com/in/vernkofford/" target="_blank" rel="noreferrer" aria-label="LinkedIN"><FaLinkedin /></a>
       </div>
     </div>
   )
