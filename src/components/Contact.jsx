@@ -15,6 +15,7 @@ export default function Contact() {
         if (field === 'name') {
             if (!value) return 'Name is required'
             if (value.trim().length < 2) return 'Name must be at least 2 characters'
+            if (value.length > 100) return 'Name must be under 100 characters'
         }
 
         if (field === 'email') {
