@@ -21,7 +21,7 @@ export default function Nav() {
             </button>
 
             {menuOpen && (
-                <div className="nav-mobile">
+                <div className="nav-mobile" data-testid="mobile-menu">
                     {NAV_LINKS.map((link) => (
                         <a key={link} href={`#${link.toLowerCase()}`} onClick={() => setMenuOpen(false)}>
                         {link}
