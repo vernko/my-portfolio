@@ -10,7 +10,7 @@ export default function Nav() {
         <nav className="nav">
             <span className="nav-logo">Vern Kofford</span>
 
-            <div className="nav-links">
+            <div className="nav-links" data-testid="desktop-menu">
                 {NAV_LINKS.map((link) => (
                 <a key={link} href={`#${link.toLowerCase()}`}>{link}</a>
                 ))}
