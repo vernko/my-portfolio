@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { fireEvent } from '@testing-library/react'
 import Contact from '../../components/Contact'
+import { expect } from 'vitest'
 
 describe('Contact', () => {
     describe('rendering', () => {
@@ -17,6 +18,31 @@ describe('Contact', () => {
             expect(screen.getByPlaceholderText(/name/i)).toBeInTheDocument()
             expect(screen.getByPlaceholderText(/email/i)).toBeInTheDocument()
             expect(screen.getByPlaceholderText(/message/i)).toBeInTheDocument()
+        })
+
+        test('renders counters on name and message fields', () => {
+            render(<Contact />)
+            expect(screen.getByTestId("name-char-count")).toBeInTheDocument()
+            expect(screen.getByTestId("message-char-count")).toBeInTheDocument()
+        })
+
+        test('character counter updates as user types', async () => {
+            const user = userEvent.setup()
+            render(<Contact />)
+            
+            await user.type(screen.getByLabelText(/name/i), 'Vern')
+            expect(screen.getByTestId('name-char-count')).toHaveTextContent('4/100')
+            
+            await user.type(screen.getByLabelText(/message/i), 'Hello')
+            expect(screen.getByTestId('message-char-count')).toHaveTextContent('5/300')
+        })
+
+        test('character counter turns red when approaching limit', async () => {
+            const user = userEvent.setup()
+            render(<Contact />)
+            
+            fireEvent.change(screen.getByLabelText(/message/i), { target: { value: 'a'.repeat(281) } })
+            expect(screen.getByTestId('message-char-count')).toHaveClass('contact-char-count--warning')
         })
     })
 
