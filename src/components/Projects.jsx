@@ -42,24 +42,24 @@ export default function Projects() {
     return(
         <section id="projects" className="projects fade-in" ref={ref}>
             <div className="projects-inner">
-                <h1>Projects</h1>
+                <h1 data-testid="projects-heading">Projects</h1>
                 
                 <div className="projects-grid">
-                    {PROJECTS.map((card) => (
-                        <div key={card.id} className="project-card">
+                    {PROJECTS.map((projects) => (
+                        <div key={projects.id} className="project-card" data-testid={`projects-card-${projects.title.toLowerCase().replace(/\s+/g, '-')}`}>
                             <div className="project-card-title">
-                                <h2>{card.title}</h2>
+                                <h2>{projects.title}</h2>
                             </div>
                             <div className="project-card-description">
-                                <p>{card.description}</p>
+                                <p>{projects.description}</p>
                             </div>
                             <div className="project-card-tech">
-                                {card.tech.map((tech) => (
+                                {projects.tech.map((tech) => (
                                 <span key={tech}>{tech}</span>
                                 ))}
                             </div>
-                            <div className="project-card-link">
-                                <a href={card.link} target="_blank">View Project</a>
+                            <div className="project-card-link" data-testid={`projects-link-${projects.id}`}>
+                                <a href={projects.link} target="_blank">View Project</a>
                             </div>
                         </div>
                     ))}

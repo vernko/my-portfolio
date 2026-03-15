@@ -30,11 +30,11 @@ export default function Skills() {
     return(
         <section id="skills" className="skills fade-in" ref={ref}>
             <div className="skills-inner">
-                <h2>Skills</h2>
+                <h2 data-testid="skills-heading">Skills</h2>
 
                 <div className="skills-grid">
                     {SKILLS.map((skill) => (
-                        <div key={skill.category} className="skill-card">
+                        <div key={skill.category} className="skill-card" data-testid={`skill-category-${skill.category.toLowerCase().replace(/\s+/g, '-')}`}>
                             <h3>{skill.category}</h3>
 
                             <div className="card-tech">

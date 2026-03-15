@@ -12,7 +12,7 @@ export default function Nav() {
 
             <div className="nav-links" data-testid="desktop-menu">
                 {NAV_LINKS.map((link) => (
-                <a key={link} href={`#${link.toLowerCase()}`}>{link}</a>
+                <a key={link} href={`#${link.toLowerCase()}`} data-testid={`nav-link-${link.toLowerCase().replace(/\s+/g, '-')}`}>{link}</a>
                 ))}
             </div>
 
