@@ -52,11 +52,11 @@ export default function Experience() {
     return (
         <section id="experience" className="experience fade-in" ref={ref}>
             <div className="experience-inner">
-                <h1>Experience</h1>
+                <h1 data-testid="experience-heading">Experience</h1>
 
                 <div className="experience-grid">
                     {EXPERIENCES.map((experience) => (
-                        <div key={`${experience.company}-${experience.title}`} className="experience-card">
+                        <div key={`${experience.company}-${experience.title}`} className="experience-card" data-testid={`experience-card-${experience.company.toLowerCase().replace(/\s+/g, '-')}`}>
                             <div className="experience-card-title">
                                 <h2>{experience.title}</h2>
                             </div>

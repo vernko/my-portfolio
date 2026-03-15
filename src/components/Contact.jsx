@@ -79,7 +79,7 @@ export default function Contact() {
     return (
         <section id="contact" className="contact fade-in" ref={ref}>
             <div className="contact-inner">
-                <h1>Contact</h1>
+                <h1 data-testid="contact-heading">Contact</h1>
 
                 {sent ? (
                     <div className="contact-success">
@@ -93,6 +93,7 @@ export default function Contact() {
                                 type="text"
                                 className="contact-input"
                                 id="name"
+                                data-testid="contact-name-field"
                                 autoComplete="name"
                                 placeholder="Your name"
                                 value={name}
@@ -110,6 +111,7 @@ export default function Contact() {
                                 type="email"
                                 className="contact-input"
                                 id="email"
+                                data-testid="contact-email-field"
                                 autoComplete="email"
                                 placeholder="Your email"
                                 value={email}
@@ -124,6 +126,7 @@ export default function Contact() {
                                 type="text"
                                 className="contact-input"
                                 id="message"
+                                data-testid="contact-message-field"
                                 placeholder="Your message"
                                 value={message}
                                 onChange={(e) => setMessage(e.target.value)}
@@ -136,7 +139,7 @@ export default function Contact() {
                         </div>
 
                         {submitError && <p className="contact-error">{submitError}</p>}
-                        <button type="submit" className="contact-submit">{isSubmitting ? 'Sending...' : 'Submit'}</button>
+                        <button type="submit" className="contact-submit" data-testid="contact-submit-btn">{isSubmitting ? 'Sending...' : 'Submit'}</button>
                     </form>
                 )}
             </div>
