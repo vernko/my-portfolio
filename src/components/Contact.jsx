@@ -77,7 +77,7 @@ export default function Contact() {
     const ref = useScrollAnimation()
 
     return (
-        <section id="contact" className="contact fade-in" ref={ref}>
+        <section id="contact" className="contact fade-in" ref={ref} data-testid="contact-section">
             <div className="contact-inner">
                 <h1 data-testid="contact-heading">Contact</h1>
 

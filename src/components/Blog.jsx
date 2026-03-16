@@ -5,7 +5,7 @@ export default function Blog() {
     const ref = useScrollAnimation()
 
     return (
-        <section id="blog" className="blog fade-in" ref={ref}>
+        <section id="blog" className="blog fade-in" ref={ref} data-testid="blog-section">
             <div className="blog-inner">
                 <h1 data-testid="blod-heading">Blog</h1>
                 <h2>Coming soon!</h2>

@@ -5,7 +5,7 @@ export default function About() {
   const ref = useScrollAnimation()
 
   return (
-    <section id="about" className="about fade-in" ref={ref}>
+    <section id="about" className="about fade-in" ref={ref} data-testid="about-section">
       <div className="about-inner">
         <h2 data-testid="about-heading">About</h2>
         <div className="about-grid">

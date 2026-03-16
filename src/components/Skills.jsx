@@ -28,7 +28,7 @@ export default function Skills() {
     const ref = useScrollAnimation()
 
     return(
-        <section id="skills" className="skills fade-in" ref={ref}>
+        <section id="skills" className="skills fade-in" ref={ref} data-testid="skills-section">
             <div className="skills-inner">
                 <h2 data-testid="skills-heading">Skills</h2>
 
