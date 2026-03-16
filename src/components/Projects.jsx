@@ -40,7 +40,7 @@ export default function Projects() {
     const ref = useScrollAnimation()
 
     return(
-        <section id="projects" className="projects fade-in" ref={ref}>
+        <section id="projects" className="projects fade-in" ref={ref} data-testid="projects-section">
             <div className="projects-inner">
                 <h1 data-testid="projects-heading">Projects</h1>
                 

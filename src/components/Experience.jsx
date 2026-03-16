@@ -50,7 +50,7 @@ export default function Experience() {
     const ref = useScrollAnimation()
 
     return (
-        <section id="experience" className="experience fade-in" ref={ref}>
+        <section id="experience" className="experience fade-in" ref={ref} data-testid="experience-section">
             <div className="experience-inner">
                 <h1 data-testid="experience-heading">Experience</h1>
 

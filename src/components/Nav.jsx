@@ -7,7 +7,7 @@ export default function Nav() {
     const [menuOpen, setMenuOpen] = useState(false)
 
     return(
-        <nav className="nav">
+        <nav className="nav" data-testid="nav-section">
             <span className="nav-logo">Vern Kofford</span>
 
             <div className="nav-links" data-testid="desktop-menu">

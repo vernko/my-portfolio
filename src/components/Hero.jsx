@@ -4,7 +4,7 @@ import profilePhoto from '../assets/profile.png'
 
 export default function Hero({ name, title, description, availability }) {
   return (
-    <div className="hero">
+    <section className="hero" data-testid="hero-section">
       <div className="hero-content">
         <div className="hero-text">
           <h1 data-testid="hero-name">{name}</h1>
@@ -23,6 +23,6 @@ export default function Hero({ name, title, description, availability }) {
           <img src={profilePhoto} alt="Vern Kofford" />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
