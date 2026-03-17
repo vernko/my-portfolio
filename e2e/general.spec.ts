@@ -1,6 +1,12 @@
 import { test, expect } from '@playwright/test'
 
 test.describe('General', () => {
+    test('title displays correctly', async ({page}) => {
+        await page.goto('/')
+
+        await expect(page).toHaveTitle('Vern Kofford | Software Engineer in Test')
+    })
+
     test('all sections render correctly', async ({page}) => {
         await page.goto('/')
 
@@ -12,11 +18,5 @@ test.describe('General', () => {
         await expect(page.getByTestId('projects-section')).toBeVisible()
         await expect(page.getByTestId('blog-section')).toBeVisible()
         await expect(page.getByTestId('contact-section')).toBeVisible()
-    })
-
-    test('title displays correctly', async ({page}) => {
-        await page.goto('/')
-
-        await expect(page).toHaveTitle('Vern Kofford | Software Engineer in Test')
     })
 })
