@@ -16,14 +16,14 @@ export default function Nav() {
                 ))}
             </div>
 
-            <button className="nav-hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+            <button className="nav-hamburger" data-testid="nav-hamburger-btn" onClick={() => setMenuOpen(!menuOpen)}>
                 {menuOpen ? '✕' : '☰'}
             </button>
 
             {menuOpen && (
                 <div className="nav-mobile" data-testid="mobile-menu">
                     {NAV_LINKS.map((link) => (
-                        <a key={link} href={`#${link.toLowerCase()}`} onClick={() => setMenuOpen(false)}>
+                        <a key={link} href={`#${link.toLowerCase()}`} data-testid={`mobile-nav-link-${link.toLowerCase().replace(/\s+/g, '-')}`} onClick={() => setMenuOpen(false)}>
                         {link}
                         </a>
                     ))}
