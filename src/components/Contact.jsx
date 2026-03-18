@@ -82,7 +82,7 @@ export default function Contact() {
                 <h1 data-testid="contact-heading">Contact</h1>
 
                 {sent ? (
-                    <div className="contact-success">
+                    <div className="contact-success" data-testid="contact-success-msg">
                         Message sent! I'll get back to you soon.
                     </div>
                 ) : (
@@ -103,7 +103,7 @@ export default function Contact() {
                             <p className={`contact-char-count ${name.length > 80 ? 'contact-char-count--warning' : ''}`} data-testid="name-char-count">
                                 {name.length}/100
                             </p>
-                            {errors.name && <p className="contact-error">{errors.name}</p>}
+                            {errors.name && <p className="contact-error" data-testid="contact-error-msg">{errors.name}</p>}
                         </div>
                         <div>
                             <label htmlFor="email">Email: <span className="required">*</span></label>
@@ -138,7 +138,7 @@ export default function Contact() {
                             {errors.message && <p className="contact-error">{errors.message}</p>}
                         </div>
 
-                        {submitError && <p className="contact-error">{submitError}</p>}
+                        {submitError && <p className="contact-error" data-testid="contact-error-msg">{submitError}</p>}
                         <button type="submit" className="contact-submit" data-testid="contact-submit-btn">{isSubmitting ? 'Sending...' : 'Submit'}</button>
                     </form>
                 )}
