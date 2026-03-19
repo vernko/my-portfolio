@@ -9,20 +9,22 @@ import Skills from './components/Skills'
 
 export default function App() {
   return (
-    <div>
-      <Nav />
-      <Hero
-        name="Vern Kofford"
-        title="Software Engineer in Test"
-        description="I build reliable systems and automate the things that shouldn't need human attention."
-        availability="🟢 Open to new opportunities"
-      />
-      <About />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Blog />
-      <Contact />
-    </div>
+    <main>
+      <div>
+        <Nav />
+        <Hero
+          name="Vern Kofford"
+          title="Software Engineer in Test"
+          description="I build reliable systems and automate the things that shouldn't need human attention."
+          availability="🟢 Open to new opportunities"
+        />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Blog />
+        <Contact />
+      </div>
+    </main>
   )
 }
