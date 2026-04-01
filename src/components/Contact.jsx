@@ -100,7 +100,7 @@ export default function Contact() {
                                 onChange={(e) => setName(e.target.value)}
                                 onBlur={() => validateField('name')}
                             />
-                            <p className={`contact-char-count ${name.length > 80 ? 'contact-char-count--warning' : ''}`} data-testid="name-char-count">
+                            <p className={`contact-char-count ${name.length > 80 ? 'contact-char-count--warning' : ''}`} tabIndex={-1} data-testid="name-char-count">
                                 {name.length}/100
                             </p>
                             {errors.name && <p className="contact-error" data-testid="contact-error-msg">{errors.name}</p>}
@@ -132,7 +132,7 @@ export default function Contact() {
                                 onChange={(e) => setMessage(e.target.value)}
                                 onBlur={() => validateField('message')}
                             />
-                            <p className={`contact-char-count ${message.length > 280 ? 'contact-char-count--warning' : ''}`} data-testid="message-char-count">
+                            <p className={`contact-char-count ${message.length > 280 ? 'contact-char-count--warning' : ''}`} tabIndex={-1} data-testid="message-char-count">
                                 {message.length}/300
                             </p>
                             {errors.message && <p className="contact-error">{errors.message}</p>}
